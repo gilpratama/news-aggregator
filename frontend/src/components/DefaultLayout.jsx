@@ -2,6 +2,7 @@ import {Link, Navigate, Outlet} from "react-router-dom";
 import {useStateContext} from "../context/ContextProvider";
 import axiosClient from "../axios-client.js";
 import {useEffect} from "react";
+import News from '../components/News';
 
 export default function DefaultLayout() {
   const {user, token, setUser, setToken, notification} = useStateContext();
@@ -29,14 +30,14 @@ export default function DefaultLayout() {
 
   return (
     <div id="defaultLayout">
-      <aside>
+      {/* <aside>
         <Link to="/dashboard">Dashboard</Link>
         <Link to="/users">Users</Link>
-      </aside>
+      </aside> */}
       <div className="content">
         <header>
           <div>
-            Header
+            News Aggregator
           </div>
 
           <div>
@@ -45,7 +46,7 @@ export default function DefaultLayout() {
           </div>
         </header>
         <main>
-          <Outlet/>
+          <News />
         </main>
         {notification &&
           <div className="notification">
