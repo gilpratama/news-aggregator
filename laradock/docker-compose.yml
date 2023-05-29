@@ -55,6 +55,18 @@ volumes:
 
 services:
 
+    react-frontend:
+      build:
+        context: ../frontend
+        dockerfile: Dockerfile
+      ports:
+        - "4000:4000"
+      volumes:
+        - ../frontend:/app
+      networks:
+        - frontend
+        - backend
+
 ### Workspace Utilities ##################################
     workspace:
       build:

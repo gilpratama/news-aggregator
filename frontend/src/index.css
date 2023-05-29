@@ -218,6 +218,17 @@ table > tbody > tr > td {
     align-items: center;
 }
 
+#dark-content header {
+    height: 80px;
+    padding: 2rem 3rem;
+    background-color: black;
+    color: #FFFFFF;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #defaultLayout main {
     padding: 2rem;
 }
