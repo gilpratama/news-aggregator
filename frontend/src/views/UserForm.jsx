@@ -13,6 +13,7 @@ export default function UserForm() {
     password: "",
     password_confirmation: "",
     dark_mode: "",
+    font_size: "",
   });
   const [errors, setErrors] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -90,6 +91,35 @@ export default function UserForm() {
               onChange={(ev) => setUser({ ...user, email: ev.target.value })}
               placeholder="Email"
             />
+            <select
+              value={user.dark_mode}
+              onChange={(ev) =>
+                setUser({ ...user, dark_mode: ev.target.value })
+              }
+              className="select-dark-mode"
+              placeholder="Choose your mode"
+            >
+              <option value="" disabled>
+                Choose your mode
+              </option>
+              <option value="0">Light mode</option>
+              <option value="1">Dark mode</option>
+            </select>
+            <select
+              value={user.font_size}
+              onChange={(ev) =>
+                setUser({ ...user, font_size: ev.target.value })
+              }
+              className="select-font-size"
+              placeholder="Choose your font size"
+            >
+              <option value="" disabled>
+                Choose your font size
+              </option>
+              <option value="0">Normal</option>
+              <option value="1">Small</option>
+              <option value="2">Big</option>
+            </select>
             <input
               type="password"
               onChange={(ev) => setUser({ ...user, password: ev.target.value })}
@@ -102,21 +132,6 @@ export default function UserForm() {
               }
               placeholder="Password Confirmation"
             />
-            <select
-              value={user.dark_mode}
-              onChange={(ev) =>
-                setUser({ ...user, dark_mode: ev.target.value })
-              }
-              className="select-dark-mode"
-              placeholder="Choose your mode"
-            >
-              <option value="" disabled hidden>
-                Choose your mode
-              </option>
-              <option value="0">Light mode</option>
-              <option value="1">Dark mode</option>
-            </select>
-
             <button className="btn">Save</button>
           </form>
         )}

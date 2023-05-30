@@ -80,7 +80,7 @@ select {
 }
 
 input:focus {
-    border-color: #5b08a7;
+    border-color: #275E75;
 }
 
 .btn,
@@ -89,7 +89,7 @@ input:focus {
 .btn-delete {
     font-family: "Roboto", sans-serif;
     outline: 0;
-    background: #5b08a7;
+    background: #275E75;
     border: 0;
     text-decoration: none;
     padding: 15px;
@@ -125,6 +125,7 @@ input:focus {
     transition: all 0.3s;
     border-radius: 6px;
 }
+
 .btn-logout:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
@@ -140,10 +141,34 @@ input:focus {
     background-color: rgba(92, 92, 92, 0.438);
 }
 
+.btn-home {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    color: #212121;
+    transition: all 0.3s;
+    border-radius: 6px;
+}
+
+.btn-home:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#dark-content .btn-home {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    color: #DEDEDE;
+    transition: all 0.3s;
+    border-radius: 6px;
+}
+#dark-content .btn-home:hover {
+    background-color: rgba(92, 92, 92, 0.438);
+    text-decoration: none;
+}
+
 .btn:hover,
 .btn:active,
 .btn:focus {
-    background: #5b08a7;
+    background: #275E75;
 }
 
 .text-center {
@@ -238,7 +263,7 @@ table > tbody > tr > td {
 }
 
 .login-signup-form .form .message a {
-    color: #5b08a7;
+    color: #275E75;
     text-decoration: none;
 }
 
@@ -251,7 +276,7 @@ table > tbody > tr > td {
 
 #defaultLayout aside {
     width: 240px;
-    background-color: #5b08a7;
+    background-color: #275E75;
     padding: 1rem
 }
 

@@ -34,6 +34,7 @@ class UpdateUserRequest extends FormRequest
                 ->symbols(),
             ],
             'dark_mode' => 'required',
+            'font_size' => 'required',
         ];
     }
 }

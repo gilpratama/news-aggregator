@@ -22,6 +22,7 @@ class User extends Authenticatable
         'email',
         'password',
         'dark_mode',
+        'font_size',
     ];
 
     /**

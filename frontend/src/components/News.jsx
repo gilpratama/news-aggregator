@@ -67,7 +67,7 @@ const NewsPortal = () => {
       </div>
       <div className="news-container">
         <div className="news-column">
-          <h2>NewsAPI</h2>
+          <p className='source-title'>NewsAPI</p>
           <br />
           <br />
           {newsToDisplay.newsApiData.map((news, index) => (
@@ -87,7 +87,7 @@ const NewsPortal = () => {
           ))}
         </div>
         <div className="news-column">
-          <h2>The Guardian</h2>
+          <p className='source-title'>The Guardian</p>
           <br />
           <br />
           {newsToDisplay.guardianApiData.map((news, index) => (
@@ -106,7 +106,7 @@ const NewsPortal = () => {
           ))}
         </div>
         <div className="news-column">
-          <h2>New York Times</h2>
+          <p className='source-title'>New York Times</p>
           <br />
           <br />
           {newsToDisplay.nytApiData.map((news, index) => (
