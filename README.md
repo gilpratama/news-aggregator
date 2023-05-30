@@ -112,3 +112,7 @@ Due to a very limited time for doing the project, I was unable to match the APIs
 
  - [Laradock](https://github.com/laradock/laradock)
  - [Laravel React Starter](https://github.com/thecodeholic/laravel-react-starter)
+
+## Closure
+
+Please don't hesitate to reach out if you encounter any issues while setting up the project. I will be happy to provide assistance and support with great enthusiasm.
