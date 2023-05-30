@@ -17,14 +17,14 @@ To run the News Aggregator project locally, please follow these steps:
 ### Clone the repository:
 `git clone git@github.com:gilpratama/news-aggregator.git`
 
-### Install Node Component on Frontend
-`cd frontend` and execute `npm install`
-
 ### Navigate to the project directory:
 `cd news-aggregator`
 
+### Install Node Component on Frontend
+`cd frontend` and execute `npm install`
+
 ### Navigate to Laradock folder:
-`cd laradock`
+back to parent directory by `cd ..` and execute `cd laradock`
 
 ### Build and start the Docker containers:
 `docker compose up -d nginx mysql react-frontend`
