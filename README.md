@@ -45,9 +45,6 @@ Execute `exit` to close workspace bash
 #### Run Composer Installation
 `composer install`
 
-#### Migrate database table
-`php artisan migrate`
-
 #### Setup Laravel .ENV file 
 `cp .env.example .env`
 
@@ -64,6 +61,9 @@ DB_DATABASE={your database name}
 DB_USERNAME=root
 DB_PASSWORD=root
 ```
+
+#### Migrate database table
+`php artisan migrate`
 
 #### Connect to 3 News APIs
 Copy NewsAPI, The Guardian and NYTimes API to Laravel .ENV
