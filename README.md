@@ -12,6 +12,7 @@ News Aggregator is a simple project that utilizes PHP Laravel 8.0 as the backend
 ## Installation
 
 This project best runs on Windows Subsystem for Linux (WSL) or other similar environments.
+
 To run the News Aggregator project locally, please follow these steps:
 
 ### Clone the repository:
