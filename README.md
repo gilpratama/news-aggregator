@@ -54,6 +54,16 @@ Execute `exit` to close workspace bash
 #### Generate APP_KEY
 `php artisan key:generate`
 
+#### Connect to your Database
+```
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE={your database name}
+DB_USERNAME=root
+DB_PASSWORD=root
+```
+
 #### Copy NewsAPI, The Guardian and NYTimes API to Laravel .ENV
 `NEWSAPI_KEY=2e8a013e80d84b32ac7cefe98e1b03c2
 GUARDIAN_API_KEY=b6e8fb1f-7adb-4261-9118-80bcc4b779c1
