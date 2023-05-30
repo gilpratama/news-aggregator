@@ -65,7 +65,7 @@ DB_USERNAME=root
 DB_PASSWORD=root
 ```
 
-#### Access 3 News APIs
+#### Connect to 3 News APIs
 Copy NewsAPI, The Guardian and NYTimes API to Laravel .ENV
 ```
 NEWSAPI_KEY=2e8a013e80d84b32ac7cefe98e1b03c2
