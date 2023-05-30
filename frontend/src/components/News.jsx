@@ -27,17 +27,20 @@ const NewsPortal = () => {
     const filteredNewsApiData = newsData.newsApiData.filter(
       news =>
         news.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (news.description && news.description.toLowerCase().includes(searchTerm.toLowerCase()))
+        (news.description && news.description.toLowerCase().includes(searchTerm.toLowerCase())) ||
+        (news.date && news.date.toLowerCase().includes(searchTerm.toLowerCase()))
     );
     const filteredGuardianApiData = newsData.guardianApiData.filter(
       news =>
         news.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (news.description && news.description.toLowerCase().includes(searchTerm.toLowerCase()))
+        (news.description && news.description.toLowerCase().includes(searchTerm.toLowerCase())) ||
+        (news.date && news.date.toLowerCase().includes(searchTerm.toLowerCase()))
     );
     const filteredNytApiData = newsData.nytApiData.filter(
       news =>
         news.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (news.description && news.description.toLowerCase().includes(searchTerm.toLowerCase()))
+        (news.description && news.description.toLowerCase().includes(searchTerm.toLowerCase())) ||
+        (news.date && news.date.toLowerCase().includes(searchTerm.toLowerCase()))
     );
     setSearchResults({ newsApiData: filteredNewsApiData, guardianApiData: filteredGuardianApiData, nytApiData: filteredNytApiData });
   }, [searchTerm, newsData]);
@@ -48,6 +51,15 @@ const NewsPortal = () => {
 
   const newsToDisplay = searchTerm ? searchResults : newsData;
 
+  const options = {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric'
+  };
+
   return (
     <div>
       <div className="search-bar">
@@ -56,46 +68,59 @@ const NewsPortal = () => {
       <div className="news-container">
         <div className="news-column">
           <h2>NewsAPI</h2>
+          <br />
+          <br />
           {newsToDisplay.newsApiData.map((news, index) => (
             <div className="news-card" key={index}>
               {news.image && <img className="news-thumbnail" src={news.image} alt="News Thumbnail" />}
               <div>
                 <h3 className="news-title">{news.title}</h3>
+                <p className="news-date">{new Date(news.date).toLocaleString('en-US', options)}</p>
                 <p className="news-description">{news.description}</p>
                 <a href={news.link} target="_blank" rel="noopener noreferrer">
                   Read more
                 </a>
               </div>
+              <br />
+              <br />
             </div>
           ))}
         </div>
         <div className="news-column">
           <h2>The Guardian</h2>
+          <br />
+          <br />
           {newsToDisplay.guardianApiData.map((news, index) => (
             <div className="news-card" key={index}>
               {news.image && <img className="news-thumbnail" src={news.image} alt="News Thumbnail" />}
               <div>
                 <h3 className="news-title">{news.title}</h3>
+                <p className="news-date">{new Date(news.date).toLocaleString('en-US', options)}</p>
                 <p className="news-description">{news.description}</p>
                 <a href={news.link} target="_blank" rel="noopener noreferrer">
                   Read more
                 </a>
               </div>
+              <br />
             </div>
           ))}
         </div>
         <div className="news-column">
           <h2>New York Times</h2>
+          <br />
+          <br />
           {newsToDisplay.nytApiData.map((news, index) => (
             <div className="news-card" key={index}>
               {news.image && <img className="news-thumbnail" src={news.image} alt="News Thumbnail" />}
               <div>
                 <h3 className="news-title">{news.title}</h3>
+                <p className="news-date">{new Date(news.date).toLocaleString('en-US', options)}</p>
                 <p className="news-description">{news.description}</p>
                 <a href={news.link} target="_blank" rel="noopener noreferrer">
                   Read more
                 </a>
               </div>
+              <br />
             </div>
           ))}
         </div>

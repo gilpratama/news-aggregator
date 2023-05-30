@@ -30,9 +30,10 @@ class UpdateUserRequest extends FormRequest
             'password' => [
                 'confirmed',
                 Password::min(8)
-                    ->letters()
-                    ->symbols(),
-            ]
+                ->letters()
+                ->symbols(),
+            ],
+            'dark_mode' => 'required',
         ];
     }
 }

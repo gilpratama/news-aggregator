@@ -17,9 +17,9 @@ class NewsController extends Controller
         $guardianApiResponse = Http::get($guardianApiUrl)->json();
         $nytApiResponse = Http::get($nytApiUrl)->json();
 
-        $newsApiData = $this->extractNewsData($newsApiResponse['articles'], 'title', 'description', 'urlToImage', 'url');
-        $guardianApiData = $this->extractNewsData($guardianApiResponse['response']['results'], 'webTitle', 'webTitle', 'fields.thumbnail', 'webUrl');
-        $nytApiData = $this->extractNewsData($nytApiResponse['results'], 'title', 'abstract', 'multimedia[0].url', 'url');
+        $newsApiData = $this->extractNewsData($newsApiResponse['articles'], 'title', 'description', 'urlToImage', 'url', 'publishedAt');
+        $guardianApiData = $this->extractNewsData($guardianApiResponse['response']['results'], 'webTitle', 'webTitle', 'fields.thumbnail', 'webUrl', 'webPublicationDate');
+        $nytApiData = $this->extractNewsData($nytApiResponse['results'], 'title', 'abstract', 'multimedia[0].url', 'url', 'published_date');
 
         $data = [
             'newsApiData' => $newsApiData,
@@ -30,7 +30,7 @@ class NewsController extends Controller
         return response()->json($data);
     }
 
-    private function extractNewsData($data, $titleKey, $descriptionKey, $imageKey, $linkKey)
+    private function extractNewsData($data, $titleKey, $descriptionKey, $imageKey, $linkKey, $dateKey)
     {
         $extractedData = [];
 
@@ -40,6 +40,7 @@ class NewsController extends Controller
                 'description' => $item[$descriptionKey],
                 'image' => isset($item[$imageKey]) ? $item[$imageKey] : null,
                 'link' => $item[$linkKey],
+                'date' => $item[$dateKey],
             ];
             $extractedData[] = $extractedItem;
         }
