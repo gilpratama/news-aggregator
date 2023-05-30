@@ -76,7 +76,7 @@ NYT_API_KEY=gK35i7aY5TsK22U3T2srPwFrESeTDXCV
 ```
 
 ## Access application
-Open your web browser and visit http://localhost:3000 to view the News Aggregator frontend interface.
+Open your web browser and visit http://localhost:4000 to view the News Aggregator frontend interface.
 
 
 ## FAQ
