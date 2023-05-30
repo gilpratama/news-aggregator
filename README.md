@@ -62,6 +62,8 @@ DB_USERNAME=root
 DB_PASSWORD=root
 ```
 
+Run `chmod -R 777 .` if you encounter permission problem
+
 #### Migrate database table
 `php artisan migrate`
 
