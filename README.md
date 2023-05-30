@@ -55,6 +55,7 @@ Execute `exit` to close workspace bash
 `php artisan key:generate`
 
 #### Connect to your Database
+Copy these lines to your Laravel .ENV file.
 ```
 DB_CONNECTION=mysql
 DB_HOST=mysql
@@ -64,10 +65,13 @@ DB_USERNAME=root
 DB_PASSWORD=root
 ```
 
-#### Copy NewsAPI, The Guardian and NYTimes API to Laravel .ENV
-`NEWSAPI_KEY=2e8a013e80d84b32ac7cefe98e1b03c2
+#### Access 3 News APIs
+Copy NewsAPI, The Guardian and NYTimes API to Laravel .ENV
+```
+NEWSAPI_KEY=2e8a013e80d84b32ac7cefe98e1b03c2
 GUARDIAN_API_KEY=b6e8fb1f-7adb-4261-9118-80bcc4b779c1
-NYT_API_KEY=gK35i7aY5TsK22U3T2srPwFrESeTDXCV`
+NYT_API_KEY=gK35i7aY5TsK22U3T2srPwFrESeTDXCV
+```
 
 ## Access application
 Open your web browser and visit http://localhost:3000 to view the News Aggregator frontend interface.
