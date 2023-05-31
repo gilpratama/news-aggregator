@@ -108,7 +108,9 @@ Yes, unfortunately filtering by category isn't fully functional, for now.
 
 ## Bugs
 #### Filter by category
-Due to a very limited time for doing the project, I was unable to match the APIs used for filter the news by category. I will improve my skill as soon as I got my job offer 😉 Promise 🤞
+Due to a very limited time for doing the project, I was unable to match the APIs used for filter the news by category, author, and source. But I managed to make every keyword is searchable in the searchbox for now. I will improve my skill as soon as I got my job offer 😉 Promise 🤞
+
+
 ## Acknowledgements
 
  - [Laradock](https://github.com/laradock/laradock)
